@@ -1,6 +1,6 @@
 {
   "name": "hexo-cldnry",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Hexo tag to add an image from Cloudinary using Cloudinary SDK.",
   "main": "index.js",
   "scripts": {
