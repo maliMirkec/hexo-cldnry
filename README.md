@@ -33,7 +33,7 @@ api_secret: YOUR_API_SECRET
 **Step 1:** Add cldnry tag where you want to load the image.
 
 ```md
-{% cldnry img_name [alt] [class] %}
+{% cldnry img_name [alt] [class] [placeholder] %}
 ```
 
 where:
@@ -41,6 +41,7 @@ where:
 - `img_name` - name of the image from Cloudinary
 - `alt` - image title (optional)
 - `class` - custom class (optional)
+- `placeholder` - custom placeholder image (optional)
 
 **Step 2:** Add cldnry_shrinkwrap script before closing `body` tag.
 
@@ -55,13 +56,13 @@ cl.responsive();
 ## Example
 
 ```md
-{% cldnry IMAGE_NAME.png "My image title" "my-image-class" %}
+{% cldnry "IMAGE_NAME.png" "My image title" "my-image-class" "MY_PLACEHOLDER.png" %}
 ```
 
 ```html
 <img class="cld-responsive my-image-class"
   data-src="https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/w_auto,dpr_auto,c_scale/IMAGE_NAME.png"
-  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+  src="MY_PLACEHOLDER.png"
   alt="My image title"/>
 ```
 
