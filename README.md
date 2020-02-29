@@ -18,7 +18,9 @@ yarn add hexo-cldnry
 
 Then register for [Cloudinary], if you haven't already.
 
-Add `cldnry.yml` file inside `source/_data` folder. Add the following information:
+Either add `CLDNRY_CLOUD_NAME`, `CLDNRY_API_KEY` and `CLDNRY_API_SECRET` environment variables.
+
+Or add `cldnry.yml` file inside `source/_data` folder. Add the following information:
 
 ```yml
 cloud_name: YOUR_CLOUD_NAME
@@ -26,7 +28,7 @@ api_key: YOUR_API_KEY
 api_secret: YOUR_API_SECRET
 ```
 
-> Make sure `site.data.cldnry.cloud_name` data is available in your templates.
+In this case make sure `site.data.cldnry.cloud_name` data is available in your templates.
 
 ## Usage
 
